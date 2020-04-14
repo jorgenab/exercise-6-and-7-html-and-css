@@ -1,0 +1,96 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+body, header, main, h1, h2, h3, h4, h5, h6, ul, footer, p {
+	margin: 0;
+	padding: 0;
+}
+
+body > header, body > main, body > iframe, body > h2, body > ul, body > footer {
+	display: block;
+	padding: 0.5em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+html {
+	padding: 5px;
+}
+
+body {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: "header   header   header   header   header  "
+		                 ".        main     main     main     .       "
+		                 ".        iframe   iframe   iframe   .       "
+	                     "body_h2  body_h2  .        .        .       "
+		                 "body_ul  body_ul  body_ul  body_ul  body_ul "
+		                 "footer   footer   footer   footer   footer  ";
+	background-color: black;
+	color: #CD9B00;
+	padding: 1em;
+	
+	border-color: #CD9B00;
+	border-style: double;
+	border-width: 5px;
+}
+
+body > header {
+	grid-area: header;
+	background-color: black;
+	padding: 0;
+}
+
+body > main h1 {
+	border-bottom-color: #CD9B00;
+	border-bottom-style: double;
+	border-bottom-width: 5px;
+	
+	padding-bottom: 2px;
+	margin-bottom: 0.5em;
+}
+
+body > main {
+	grid-area: main;
+	background-color: black;
+	border-color: #CD9B00;
+	border-style: double;
+	border-width: 5px;
+}
+
+body > iframe {
+	grid-area: iframe;
+	background-color: black;
+	width: 100%;
+	border: 0;
+	padding: 0;
+	
+	border-color: #CD9B00;
+	border-style: double;
+	border-width: 5px;
+}
+
+body > h2 {
+	grid-area: body_h2;
+	background-color: #00FFFF;
+}
+
+body > ul {
+	grid-area: body_ul;
+	background-color: aqua;
+}
+
+body > footer {
+	grid-area: footer;
+	background-color: #CD9B00;
+	line-height: 50px;
+	color: black;
+}
+
+body > footer p {
+	display: inline-block;
+	margin: 0;
+}
