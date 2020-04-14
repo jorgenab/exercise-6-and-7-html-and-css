@@ -115,9 +115,15 @@ body > ul li {
 	
 }
 
-body > ul li a:link, body > ul li a:visited, body > ul li a:hover, body > ul li a:active, body > ul li a:focus {
+body > ul li a:link, body > ul li a:visited{
 	text-decoration: none;
 	color: #97750B;
+	font-weight: bold;
+}
+
+body > ul li a:hover, body > ul li a:active, body > ul li a:focus {
+	text-decoration: underline;
+	color: #CD9B00;
 	font-weight: bold;
 }
 
